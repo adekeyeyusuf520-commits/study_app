@@ -21,7 +21,7 @@ def ask():
     if request.method == "POST":
         user_input = request.form["question"]
         try:
-            model = genai.GenerativeModel("gemini-2.5-flash")
+            model = genai.GenerativeModel("gemini-1.5-flash")
             response = model.generate_content(user_input)
             answer = response.text
         except Exception as e:
